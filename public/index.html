@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GOOSTEAM V2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="wrapper">
+
+  <div class="topbar">
+    <div>
+      <button class="btn" onclick="showHome()">🏠</button>
+      <button class="btn" onclick="showGuide()">📄</button>
+    </div>
+    <div class="lang">
+      <button id="idBtn" class="btn active" onclick="setLang('id')">ID</button>
+      <button id="enBtn" class="btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+
+  <div class="logo">GOOS<span>TEAM</span></div>
+  <div class="engine">V2.0 STABLE ENGINE</div>
+  <div class="status">
+    <span class="dot"></span>
+    <span id="systemText">SYSTEM ONLINE</span>
+  </div>
+
+  <!-- HOME -->
+  <div id="homePanel" class="card">
+    <div class="badge" id="badgeText">KONEKSI TERENKRIPSI</div>
+    <h3 id="targetText">TARGET EKSTRAKSI</h3>
+
+    <input type="text" id="url" placeholder="TEMPEL LINK DI SINI...">
+    <button class="extract" onclick="download()" id="extractBtn">⚡ EKSTRAK MEDIA</button>
+
+    <div class="features">
+      <div class="feature">SPEED<br>ULTRA-FAST</div>
+      <div class="feature yellow">SECURITY<br>AES-256</div>
+      <div class="feature">QUALITY<br>HD / NO WM</div>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- GUIDE -->
+  <div id="guidePanel" class="card hidden">
+    <div class="badge" id="guideBadge">PANDUAN SISTEM</div>
+    <h3 id="guideTitle">CARA DOWNLOAD</h3>
+    <ol id="guideList"></ol>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
